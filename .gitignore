@@ -1,0 +1,73 @@
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.iml
+
+# --- Environment / secrets (never commit) ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+!**/src/test/resources/**/*.key
+secrets/
+*.keystore
+
+# --- Java / Maven (Control Plane) ---
+backend/springboot-app/target/
+*.class
+*.jar
+*.war
+!gradle/wrapper/gradle-wrapper.jar
+.mvn/wrapper/maven-wrapper.jar
+
+# --- Python (ml-engine / tooling) ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# --- Node / frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Docker / infrastructure ---
+infrastructure/**/data/
+*.log
+
+# --- Execution engine artifacts (local runs) ---
+execution-engine/work/
+execution-engine/artifacts/
+**/surefire-reports/
+**/failsafe-reports/
+**/.coverage_artifacts/
+
+# --- ML artifacts / models (local) ---
+ml-engine/models/
+ml-engine/artifacts/
+*.onnx
+*.pt
+*.pth
+*.bin
+
+# --- Coverage / reports ---
+coverage/
+*.lcov
